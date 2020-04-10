@@ -5,27 +5,33 @@ console.log('App.js is running!');
 // JSX - JavaScript XML
 // Running watch will automatically change this in scripts
 // which is the converted code from Babel
+
+var userName = "David";
+var userAge = 'Age: 54';
+var userLocation = 'Location: Southern Shores, NC';
+
+var userStuff = {
+    name: "David Haas",
+    age: 'Age : 54',
+    location: "Location : Southern Shores, NC"
+};
 var template = React.createElement(
     'div',
     null,
     React.createElement(
         'h1',
         null,
-        'Indecision App'
+        userStuff.name
     ),
     React.createElement(
-        'ol',
+        'p',
         null,
-        React.createElement(
-            'li',
-            null,
-            'Some word stuff here'
-        ),
-        React.createElement(
-            'li',
-            null,
-            'Some more word stuff here'
-        )
+        userStuff.age
+    ),
+    React.createElement(
+        'p',
+        null,
+        userStuff.location
     )
 );
 
@@ -35,19 +41,21 @@ var template2 = React.createElement(
     React.createElement(
         'h1',
         null,
-        'David Haas'
+        userName.toUpperCase()
     ),
     React.createElement(
         'p',
         null,
-        'Age: 54'
+        'Age: ',
+        userAge
     ),
     React.createElement(
         'p',
         null,
-        'Location: Southern Shores, NC'
+        'Location: ',
+        userLocation
     )
 );
 var appRoot = document.getElementById('app');
 
-ReactDOM.render(template2, appRoot);
+ReactDOM.render(template, appRoot);
