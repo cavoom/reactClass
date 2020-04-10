@@ -1,0 +1,4 @@
+Using Babel in Less number 9 to convert React to language that
+most browsers will understand
+Babel converts from app.js in SRC folder and places in SCRIPTS folder (public)
+Need to add babel and two extensions of Babel (Babel React and 2 others)
